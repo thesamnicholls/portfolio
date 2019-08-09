@@ -5,6 +5,10 @@ class Intro extends Component {
     return (
       <div className='intro'>
         <h1>Intro Component</h1>
+        <span role='img' aria-label='Laptop Emoji'>🏌️‍♂️</span>
+        <span role='img' aria-label='Laptop Emoji'>⚽</span>
+        <span role='img' aria-label='Laptop Emoji'>👨‍💻</span>
+        <span role='img' aria-label='Laptop Emoji'>🎮</span>
       </div>
     )
   }
