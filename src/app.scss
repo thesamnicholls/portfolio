@@ -81,3 +81,17 @@ p {
 h1, p {
   text-align: left;
 }
+
+.about {
+  padding-top: 1.5em;
+  img {
+    border-radius: 50%;
+    display: block;
+    max-height: 125px;
+    max-width: 125px;
+
+    @media (min-width: 430px) {
+      margin: 0;
+    }
+  }
+}
