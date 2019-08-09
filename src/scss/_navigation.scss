@@ -18,6 +18,11 @@
     transform: rotate(0deg);
     border: 5px solid $light-grey;
     display: inline-block;
+    margin-right: 12px;
+
+    @media (min-width: 430px) {
+      margin-right: 0;
+    }
   }
 
   &__name {
