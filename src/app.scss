@@ -1,6 +1,7 @@
 @import 'scss/variables';
 @import 'scss/navigation';
 @import 'scss/helpers';
+@import 'scss/skills';
 
 .App {
   text-align: center;
@@ -34,7 +35,7 @@
   }
 }
 
-ul {
+.nav-list {
   list-style-type: none;
   padding: 0;
   li {

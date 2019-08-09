@@ -9,7 +9,7 @@ class Navigation extends Component {
                 <span className="navigation__name _bold">SN</span>
               </div>
               <div className='navigation__links'>
-                <ul>
+                <ul className='nav-list'>
                   <li>About</li>
                   <li>Skills</li>
                   <li>Contact</li>
