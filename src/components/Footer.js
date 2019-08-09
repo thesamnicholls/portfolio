@@ -4,7 +4,7 @@ class Footer extends Component {
   render() {
     return (
         <footer className='footer'>
-          <p>Click <a href='https://github.com/'>here</a> to view this webiste on GitHub</p>
+          <p className='footer__text'>Click <a href='https://github.com/'>here</a> to view this webiste on GitHub</p>
         </footer>
     )
   }
