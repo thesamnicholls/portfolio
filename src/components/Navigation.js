@@ -8,6 +8,13 @@ class Navigation extends Component {
               <div className="navigation__logo">
                 <span className="navigation__name _bold">SN</span>
               </div>
+              <div className='navigation__links'>
+                <ul>
+                  <li>About</li>
+                  <li>Skills</li>
+                  <li>Contact</li>
+                </ul>
+              </div>
             </div>
         </div>
     )

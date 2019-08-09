@@ -33,3 +33,31 @@
     transform: rotate(360deg);
   }
 }
+
+ul {
+  list-style-type: none;
+  li {
+    color: #6d7880;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+
+    @media (min-width: 430px) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid #6d7880;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  a {
+    color: black;
+  }
+}
+
+p {
+  color: #6d7880;
+}

@@ -1,7 +1,14 @@
 .navigation {
   width: 100%;
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding: 2em 0;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 430px) {
+    display: flex;
+    padding: 4em 0;
+  }
 
   &__logo {
     display: block;
@@ -10,6 +17,7 @@
     height: 50px;
     transform: rotate(0deg);
     border: 5px solid $light-grey;
+    display: inline-block;
   }
 
   &__name {
@@ -18,5 +26,15 @@
     transform: translate(-50%,-50%) rotate(0deg);
     color: $light-grey;
     font-size: ($font-size - 3);
+  }
+}
+
+.navigation__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 430px) {
+    justify-content: flex-end;
   }
 }
