@@ -1,0 +1,16 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  border: 8px solid $light-grey;
+  margin: 0;
+}
+
+h1, h2, p, label {
+  color: $light-grey;
+}
+
+h2 {
+  margin: 0;
+}

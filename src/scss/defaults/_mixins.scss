@@ -1,0 +1,3 @@
+@mixin navigation-break {
+  @media (min-width: 430px) { @content; }
+}

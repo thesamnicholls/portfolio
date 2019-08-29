@@ -9,7 +9,7 @@ class Skills extends Component {
             <ul className='skills__list'>
               <li className='skills__list-item'>
                 <label className='skills__title'>HTML5</label>
-                <span className='skills__box--width-80'></span>
+                <span className='skills__box--width-80' />
               </li>
               <li className='skills__list-item'>
                 <label className='skills__title'>CSS</label>
