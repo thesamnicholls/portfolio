@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 * {
   font-family: 'Poppins', sans-serif;
 }
@@ -9,8 +11,4 @@ body {
 
 h1, h2, p, label {
   color: $light-grey;
-}
-
-h2 {
-  margin: 0;
 }

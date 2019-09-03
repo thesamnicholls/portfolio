@@ -1,59 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-
+// Colours
+$black: #000000;
 $white: #ffffff;
 $light-grey: #6d7880;
 
+// Typography
 $font-size: 16px;
-
-.container {
-  max-width: 1020px;
-  color: rgb(43, 45, 62);
-  margin: 0px auto;
-  padding: 0 30px 20px;
-
-  @media (min-width: 768px) {
-    padding: 0px 120px 20px;
-  }
-}
-
-span {
-  font-size: 32px;
-}
-
-.site-logo {
-  width: 50px;
-  height: 50px;
-  display: block;
-  overflow: visible;
-  border: 5px solid #6d7880;
-  position: relative;
-  transform: rotate(0deg);
-  flex-shrink: 0;
-}
-
-.logo-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%) rotate(0deg);
-  font-weight: 700;
-  font-size: 13px;
-  color: #6d7880;
-}
-
-.outer-container {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1em;
-
-  @media (min-width: 430px) {
-    padding: 0 2em;
-  }
-}
-
-.intro {
-  text-align: left;
-}

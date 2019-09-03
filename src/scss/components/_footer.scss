@@ -1,0 +1,13 @@
+.footer {
+  border-top: 1px solid $light-grey;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  &__link {
+    color: $black;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}
