@@ -1,9 +1,9 @@
 @import 'scss/defaults/variables';
-@import 'scss/defaults/scaffolding';
-@import 'scss/defaults/normalize';
 @import 'scss/defaults/mixins';
-@import 'scss/components/navigation';
-@import 'scss/components/footer';
-@import 'scss/skills';
+@import 'scss/defaults/normalize';
+@import 'scss/defaults/scaffolding';
 
-@import 'scss/defaults/shame';
+@import 'scss/components/emoji';
+@import 'scss/components/footer';
+@import 'scss/components/navigation';
+@import 'scss/components/skills';

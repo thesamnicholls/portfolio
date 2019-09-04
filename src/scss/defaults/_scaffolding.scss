@@ -12,3 +12,23 @@ body {
 h1, h2, p, label {
   color: $light-grey;
 }
+
+.container {
+  margin: 0 auto;
+  padding: 0 30px 20px;
+
+  @include tablet-break {
+    padding: 0 120px 20px;
+  }
+}
+
+.outer-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+
+  @include mobile-break {
+    padding: 0 2em;
+  }
+}

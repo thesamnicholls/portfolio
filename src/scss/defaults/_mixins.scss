@@ -1,3 +1,7 @@
-@mixin navigation-break {
+@mixin mobile-break {
   @media (min-width: 430px) { @content; }
+}
+
+@mixin tablet-break {
+  @media (min-width: 768px) { @content; }
 }

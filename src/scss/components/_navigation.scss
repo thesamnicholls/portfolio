@@ -6,7 +6,7 @@
   align-items: center;
   text-align: center;
 
-  @include navigation-break {
+  @include mobile-break {
     display: flex;
     padding: 4em 0;
   }
@@ -21,7 +21,7 @@
     margin-right: 19px;
     text-align: center;
 
-    @include navigation-break {
+    @include mobile-break {
       margin-right: 0;
     }
   }
@@ -55,7 +55,7 @@
       margin-right: 0;
     }
 
-    @include navigation-break {
+    @include mobile-break {
       margin-right: 30px;
     }
   }

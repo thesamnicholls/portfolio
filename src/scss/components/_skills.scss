@@ -1,12 +1,11 @@
 .skills {
   text-align: left;
-  padding-top: 1.5em;
 
   &__wrapper {
     padding-top: 20px;
     width: 100%;
 
-    @media (min-width: 768px) {
+    @include tablet-break {
       width: 60%;
     }
   }
@@ -17,7 +16,6 @@
   }
 
   &__list-item {
-    //background-color: hotpink;
     height: 42px;
     position: relative;
     margin-bottom: 45px;
@@ -25,7 +23,7 @@
 
   &__title {
     position: absolute;
-    font-size: 16px;
+    font-size: $font-size;
     top: -35px;
   }
 
@@ -35,7 +33,7 @@
     top: 0;
     margin: 0;
     padding-right: 24px;
-    border: 1px solid #6d7880;
+    border: 1px solid $light-grey;
     display: inline-block;
     height: 42px;
     line-height: 42px;
