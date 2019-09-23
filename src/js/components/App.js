@@ -1,9 +1,7 @@
-import React, { Component } from "react"
+import React, {Component, Fragment} from "react"
 import Navigation from './Navigation';
 import Intro from './Intro';
 import Footer from './Footer';
-import About from "./About";
-import Skills from "./Skills";
 import Contact from "./Contact";
 
 class App extends Component {
@@ -13,8 +11,6 @@ class App extends Component {
         <Navigation />
         <div className='container'>
           <Intro />
-          <About />
-          <Skills />
           <Contact />
         </div>
         <Footer />

@@ -1,13 +1,24 @@
-.footer {
-  border-top: 1px solid $light-grey;
-  padding-top: 2em;
-  padding-bottom: 2em;
+$this: 'o-footer' !global;
 
-  &__link {
-    color: $black;
-  }
+@include exports('#{$this}') {
 
-  &__text {
-    text-align: center;
+  $white: #ffffff;
+  $font-regular: 'Poppins', sans-serif;
+
+  .#{$this} {
+    border-top: 1px solid $white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    &__link {
+      color: $white;
+    }
+
+    &__text {
+      text-align: center;
+      font: {
+        family: $font-regular;
+      }
+    }
   }
 }

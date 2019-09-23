@@ -6,7 +6,7 @@
   align-items: center;
   text-align: center;
 
-  @include mobile-break {
+  @include tablet-break {
     display: flex;
     padding: 4em 0;
   }
@@ -16,12 +16,12 @@
     width: 50px;
     height: 50px;
     transform: rotate(0deg);
-    border: 5px solid $light-grey;
+    border: 5px solid $white;
     display: inline-block;
     margin-right: 19px;
     text-align: center;
 
-    @include mobile-break {
+    @include tablet-break {
       margin-right: 0;
     }
   }
@@ -30,7 +30,7 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%) rotate(0deg);
-    color: $light-grey;
+    color: $white;
     font-size: ($font-size - 3);
     font-weight: bold;
   }
@@ -45,8 +45,8 @@
     padding: 0;
   }
 
-  &__link {
-    color: $light-grey;
+  &__item {
+    color: $white;
     display: inline-block;
     margin-right: 20px;
     font-size: ($font-size + 4);
@@ -55,8 +55,13 @@
       margin-right: 0;
     }
 
-    @include mobile-break {
+    @include tablet-break {
       margin-right: 30px;
     }
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
   }
 }

@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
-* {
-  font-family: 'Poppins', sans-serif;
-}
+//* {
+//  font-family: 'Poppins', sans-serif;
+//}
 
 body {
-  border: 8px solid $light-grey;
+  background-color: $light-black;
+  border: 8px solid $white;
   margin: 0;
 }
 
 h1, h2, p, label {
-  color: $light-grey;
+  color: $white;
 }
 
 .container {

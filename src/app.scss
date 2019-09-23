@@ -1,9 +1,12 @@
+@import'scss/exports';
+
 @import 'scss/defaults/variables';
 @import 'scss/defaults/mixins';
 @import 'scss/defaults/normalize';
 @import 'scss/defaults/scaffolding';
 
+@import 'scss/components/contact';
 @import 'scss/components/emoji';
 @import 'scss/components/footer';
 @import 'scss/components/navigation';
-@import 'scss/components/skills';
+

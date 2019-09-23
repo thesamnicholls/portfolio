@@ -10,9 +10,9 @@ class Navigation extends Component {
           </div>
           <div className='navigation__links-wrapper'>
             <ul className='navigation__list'>
-              <li className='navigation__link'>About</li>
-              <li className='navigation__link'>Skills</li>
-              <li className='navigation__link'>Contact</li>
+              <li className='navigation__item'>
+                <a href='#' className='navigation__link' title='Click here to go to the contact section'> Contact</a>
+              </li>
             </ul>
           </div>
         </div>
