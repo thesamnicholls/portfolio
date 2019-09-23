@@ -3,21 +3,12 @@ import React, { Component } from "react"
 class Contact extends Component {
   render() {
     return (
-      <div>
-        <h1>Contact</h1>
+      <div className='l-container'>
         <div className='c-contact'>
-          <ul>
-            <li>
+          <h1 className='c-contact__title'>Contact</h1>
+          <ul className='c-contact__list'>
+            <li className='c-contact__list-item'>
               Twitter
-            </li>
-            <li>
-              Linkedin
-            </li>
-            <li>
-              GitHub
-            </li>
-            <li>
-              CodePen
             </li>
           </ul>
         </div>

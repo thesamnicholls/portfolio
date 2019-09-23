@@ -9,10 +9,8 @@ class App extends Component {
     return (
       <Fragment>
         <Navigation />
-        <div className='l-container'>
-          <Intro />
-          <Contact />
-        </div>
+        <Intro />
+        <Contact />
         <Footer />
       </Fragment>
     )
