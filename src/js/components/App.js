@@ -7,14 +7,14 @@ import Contact from "./Contact";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Fragment>
         <Navigation />
-        <div className='container'>
+        <div className='l-container'>
           <Intro />
           <Contact />
         </div>
         <Footer />
-      </div>
+      </Fragment>
     )
   }
 }

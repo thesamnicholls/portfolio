@@ -5,7 +5,7 @@ class Contact extends Component {
     return (
       <div>
         <h1>Contact</h1>
-        <div className='contact'>
+        <div className='c-contact'>
           <ul>
             <li>
               Twitter

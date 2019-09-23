@@ -1,12 +1,14 @@
-@import'scss/exports';
+@import 'scss/0-core/exports';
+@import 'scss/0-core/breakpoints';
 
-@import 'scss/defaults/variables';
-@import 'scss/defaults/mixins';
-@import 'scss/defaults/normalize';
-@import 'scss/defaults/scaffolding';
+@import 'scss/1-base/normalisation';
+@import 'scss/1-base/scaffolding';
+@import 'scss/1-base/vendor';
 
-@import 'scss/components/contact';
-@import 'scss/components/emoji';
-@import 'scss/components/footer';
-@import 'scss/components/navigation';
+@import 'scss/2-layouts/container';
 
+@import 'scss/3-objects/footer';
+@import 'scss/3-objects/navigation';
+
+@import 'scss/4-components/contact';
+@import 'scss/4-components/emoji';

@@ -1,0 +1,15 @@
+@include exports('b-scaffolding') {
+
+  $light-black: #100e17;
+  $white: #ffffff;
+
+  body {
+    background-color: $light-black;
+    border: 8px solid $white;
+    margin: 0;
+  }
+
+  h1, h2, p, label {
+    color: $white;
+  }
+}
