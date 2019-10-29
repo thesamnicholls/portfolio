@@ -1,8 +1,0 @@
-$this: 'c-emoji' !global;
-
-@include exports('#{$this}') {
-
-  .#{$this} {
-    font-size: 32px;
-  }
-}

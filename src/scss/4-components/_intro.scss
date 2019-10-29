@@ -1,16 +1,16 @@
 $this: 'c-intro' !global;
 
-@include exports('#{$this}') {
-
-  $white: #ffffff;
-  $font-regular: 'Poppins', sans-serif;
-
-  .#{$this} {
-    &__text {
-      color: $white;
-      font: {
-        family: $font-regular;
-      }
+.#{$this} {
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: center;
+  
+  &__text {
+    color: $white;
+    letter-spacing: 2px;
+    line-height: 45px;
+    font: {
+      family: $font-regular;
     }
   }
 }

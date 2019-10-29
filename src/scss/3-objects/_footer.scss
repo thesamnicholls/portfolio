@@ -1,24 +1,17 @@
 $this: 'o-footer' !global;
 
-@include exports('#{$this}') {
+.#{$this} {
+  border-top: 1px solid $white;
+  padding: 40px 0;
 
-  $white: #ffffff;
-  $font-regular: 'Poppins', sans-serif;
+  &__link {
+    color: $white;
+  }
 
-  .#{$this} {
-    border-top: 1px solid $white;
-    padding-top: 2em;
-    padding-bottom: 2em;
-
-    &__link {
-      color: $white;
-    }
-
-    &__text {
-      text-align: center;
-      font: {
-        family: $font-regular;
-      }
+  &__text {
+    text-align: center;
+    font: {
+      family: $font-regular;
     }
   }
 }
