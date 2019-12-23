@@ -3,6 +3,7 @@ $this: 'l-container' !global;
 .#{$this} {
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
 
   @include tablet-break {
     padding: 0 60px;

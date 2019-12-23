@@ -10,11 +10,6 @@ class Intro extends Component {
             I'm currently working as a Front End Developer at DRPG and i'm passionate about web development.
           </h1>
         </div>
-        <div className='c-intro'>
-          <h1 className='c-intro__text'>
-            This website is currently under construction, if you have any questions message me on twitter: @SamuelNicholls_
-          </h1>
-        </div>
       </div>
     )
   }

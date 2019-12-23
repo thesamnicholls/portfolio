@@ -1,0 +1,41 @@
+$this: 'o-overlay' !global;
+
+.#{$this} {
+  width: 100%;
+  background-color: $light-black;
+  left: 0;
+  z-index: 1;
+  display: none;
+
+  &--active {
+    @extend .#{$this};
+    display: block;
+  }
+
+  @include breakpoint('>=', 'ts') {
+    display: none;
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    font: {
+      family: $font-regular;
+      size: 20px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
