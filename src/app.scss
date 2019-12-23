@@ -1,3 +1,6 @@
+
+
+
 @import 'scss/0-core/breakpoints';
 
 @import 'scss/1-base/normalisation';
@@ -13,3 +16,39 @@
 @import 'scss/3-objects/navigation';
 
 @import 'scss/4-components/intro';
+
+.c-card {
+  height: 350px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  @include breakpoint('>=', 'ts') {
+    width: 50%;
+
+    &:nth-child(even) {
+      margin-left: 30px;
+    }
+  }
+}
+
+.c-card__image {
+  background-image: url('https://via.placeholder.com/500x350');
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 0 20px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.c-card__title {
+  font: {
+    family: $font-regular;
+    size: 25px;
+  }
+}

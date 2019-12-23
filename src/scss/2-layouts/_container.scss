@@ -18,4 +18,17 @@ $this: 'l-container' !global;
       padding: 0 20px;
     }
   }
+
+  &--card {
+    @extend .#{$this};
+    max-width: 1280px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include breakpoint('>=', 'ts') {
+      flex-wrap: nowrap;
+    }
+  }
 }

@@ -10,6 +10,32 @@ class App extends Component {
         <Navigation />
         <div className='o-main'>
           <Intro />
+          <div className='l-container'>
+            <div className='l-container--card'>
+              <div className='c-card'>
+                <div className='c-card__image'>
+                  <p className='c-card__title'>Project One</p>
+                </div>
+              </div>
+              <div className='c-card'>
+                <div className='c-card__image'>
+                  <p className='c-card__title'>Project Two</p>
+                </div>
+              </div>
+            </div>
+            <div className='l-container--card'>
+              <div className='c-card'>
+                <div className='c-card__image'>
+                  <p className='c-card__title'>Projet Three</p>
+                </div>
+              </div>
+              <div className='c-card'>
+                <div className='c-card__image'>
+                  <p className='c-card__title'>Project Four</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <Footer />
       </Fragment>
