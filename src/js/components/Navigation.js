@@ -5,21 +5,27 @@ class Navigation extends Component {
     return (
       <div className='l-container'>
         <div className='o-navigation'>
-          <div className='o-navigation__logo'>
+          <a className='o-navigation__logo' href='/'>
             <span className='o-navigation__name _bold'>SN</span>
-          </div>
+          </a>
           <div className='o-navigation__burger'>
             <div className='o-navigation__menu'></div>
           </div>
           <ul className='o-navigation__list'>
             <li className='o-navigation__item'>
-              About
+              <a className='o-navigation__link' href='/about'>
+                About
+              </a>
             </li>
             <li className='o-navigation__item'>
-              Work
+              <a className='o-navigation__link' href='/'>
+                Work
+              </a>
             </li>
             <li className='o-navigation__item'>
-              Contact
+              <a className='o-navigation__link' href='/contact'>
+                Contact
+              </a>
             </li>
           </ul>
         </div>
