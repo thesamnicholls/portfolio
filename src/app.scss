@@ -12,64 +12,30 @@
 
 @import 'scss/3-objects/footer';
 @import 'scss/3-objects/main';
-@import 'scss/3-objects/overlay';
 @import 'scss/3-objects/navigation';
 
-@import 'scss/4-components/intro';
-
-.c-card {
-  height: 350px;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 30px;
-  cursor: pointer;
-
-  @include breakpoint('>=', 'ts') {
-    width: 50%;
-
-    &:nth-child(even) {
-      margin-left: 30px;
-    }
-  }
-}
-
-.c-card__image {
-  background-image: url('https://via.placeholder.com/500x350');
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  padding: 0 20px;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-end;
-}
-
-.c-card__title {
-  font: {
-    family: $font-regular;
-    size: 25px;
-  }
-}
 
 .lfm__typing_effect {
   font-size: 40px;
   color: white;
+  font: {
+    family: $font-regular;
+  }
 }
-
-
-
 
 .c-contact {
-  width: 100%;
+  display: flex;
 }
 
-.c-contact__icon {
-  background-image: url('https://via.placeholder.com/30x30');
-  width: 30px;
-  height: 30px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.c-contact__list {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  list-style: none;
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
 }
