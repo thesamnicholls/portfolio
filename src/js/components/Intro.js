@@ -9,7 +9,7 @@ class Intro extends Component {
         <div className='c-intro'>
           <Typewriter
             options={{
-              strings: "Samuel Nicholls, Front End Developer at DRPG",
+              strings: "Samuel Nicholls, Front End Developer",
               autoStart: true,
               loop: true,
             }}
