@@ -22,51 +22,6 @@ class Navigation extends Component {
           <a className='o-navigation__logo' href='/'>
             <span className='o-navigation__name _bold'>SN</span>
           </a>
-          <div className='o-navigation__burger'>
-             <div 
-              onClick={this.handleClick} 
-              className={this.state.isToggleOn ? 'o-navigation__menu' : 'o-navigation__menu--active'}
-            />
-          </div>
-          <ul className='o-navigation__list'>
-            <li className='o-navigation__item'>
-              <a className='o-navigation__link' href='/'>
-                Work
-              </a>
-            </li>
-            <li className='o-navigation__item'>
-              <a className='o-navigation__link' href='/about'>
-                About
-              </a>
-            </li>
-            <li className='o-navigation__item'>
-              <a className='o-navigation__link' href='/contact'>
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div 
-            onClick={this.handleClick} 
-            className={this.state.isToggleOn ? 'o-overlay' : 'o-overlay--active'}
-        >
-          <ul className='o-overlay__list'>
-            <li className='o-overlay__item'>
-              <a className='o-overlay__link' href='/'>
-                Work
-              </a>
-            </li>
-            <li className='o-overlay__item'>
-              <a className='o-overlay__link' href='/about'>
-                About
-              </a>
-            </li>
-            <li className='o-overlay__item'>
-              <a className='o-overlay__link' href='/contact'>
-                Contact
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     )

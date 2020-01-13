@@ -9,6 +9,10 @@ class Information extends Component {
             Contact Page
           </h1>
         </div>
+        <div className='c-contact'>
+          <div className='c-contact__icon'></div>
+          <div className='c-contact__title'>: Contact One</div>
+        </div>
       </div>
     )
   }
