@@ -7,27 +7,12 @@ class Intro extends Component {
     return (
       <div className='l-container'>
         <div className='c-intro'>
-          <Typewriter
-            options={{
-              strings: "Samuel Nicholls, Front End Developer",
-              autoStart: true,
-              loop: true,
-            }}
+          <ReactTypingEffect
+            staticText="Sam Nicholls, I'm a"
+            text="Front End Developer"
+            speed="100"
           />
         </div>
-        {/* <div className='c-contact'>
-          <ul className='c-contact__list'>
-            <li className='c-contact__item'>
-              <a href="https://google.co.uk" className='c-contact__link'>Twitter</a>
-            </li>
-            <li className='c-contact__item'>
-              <a href="https://google.co.uk" className='c-contact__link'>Codepen</a>
-            </li>
-            <li className='c-contact__item'>
-              <a href="https://google.co.uk" className='c-contact__link'>GitHub</a>
-            </li>
-          </ul>
-        </div> */}
       </div>
     )
   }
