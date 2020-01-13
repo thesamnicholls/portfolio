@@ -11,7 +11,6 @@ class App extends Component {
         <div className='o-main'>
           <Intro />
         </div>
-        <Footer />
       </Fragment>
     )
   }
