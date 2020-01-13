@@ -1,11 +1,3 @@
-@mixin mobile-break {
-  @media (min-width: 430px) { @content; }
-}
-
-@mixin tablet-break {
-  @media (min-width: 768px) { @content; }
-}
-
 /// Map of device widths used for media queries in this project
 ///
 /// @author Oliver Wallbank
