@@ -1,58 +1,15 @@
-
-
-
 @import 'scss/0-core/breakpoints';
+@import 'scss/0-core/normalisation';
 @import 'scss/0-core/vendor';
-// @import 'scss/1-base/normalisation';
 
 @import 'scss/1-base/colours';
 @import 'scss/1-base/typopgraphy';
-// @import 'scss/1-base/variables';
-// @import 'scss/1-base/scaffolding';
 
-// @import 'scss/2-layouts/container';
+@import 'scss/2-layouts/container';
+@import 'scss/2-layouts/main';
 
-// @import 'scss/3-objects/main';
+@import 'scss/3-objects/footer';
 @import 'scss/3-objects/navigation';
 
-
-.lfm__typing_effect {
-  font-size: 40px;
-  color: white;
-  font: {
-    family: $font-regular;
-  }
-  text-align: center;
-}
-
-.c-contact {
-  display: flex;
-}
-
-.c-contact__list {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  list-style: none;
-
-  a {
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-  }
-}
-
-body {
-  background-color: black;
-}
-
-.l-container {
-  padding: 0 20px;
-}
-
-.c-intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-}
+@import 'scss/4-components/intro';
+@import 'scss/4-components/social';

@@ -1,0 +1,19 @@
+$this: 'o-footer' !global;
+
+.#{$this} {
+  margin-top: auto;
+  border-top: 1px solid $white;
+  padding: 20px;
+  text-align: center;
+
+  &__text {
+    color: $white;
+    margin: 0;
+    font-family: $font-regular;
+  }
+
+  &__link {
+    color: $white;
+  }
+}
+

@@ -1,12 +1,10 @@
 $this: 'o-navigation' !global;
 
 .#{$this} {
-  padding: 25px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 18vh;
-  padding: 0;
+  padding-top: 20px;
 
   &__logo {
     position: relative;
@@ -28,3 +26,4 @@ $this: 'o-navigation' !global;
     }
   }
 }
+

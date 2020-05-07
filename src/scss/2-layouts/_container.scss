@@ -1,0 +1,10 @@
+$this: 'l-container' !global;
+
+.#{$this} {
+  padding: 0 20px;
+
+  &--margin-top {
+    @extend .#{$this};
+    margin-top: auto;
+  }
+}

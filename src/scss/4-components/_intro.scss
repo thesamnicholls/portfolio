@@ -1,16 +1,23 @@
 $this: 'c-intro' !global;
 
 .#{$this} {
-  max-width: 700px;
-  margin: 50px auto;
-  text-align: left;
-  
-  &__text {
+  margin: 0 auto;
+  max-width: 250px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
     color: $white;
-    letter-spacing: 2px;
-    line-height: 45px;
-    font: {
-      family: $font-regular;
-    }
+    font-size: 60px;
+    font-family: $font-regular;
+  }
+
+  &__title {
+    color: $white;
+    font-size: 25px;
+    font-family: $font-regular;
   }
 }
