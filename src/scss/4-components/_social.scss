@@ -2,24 +2,22 @@ $this: 'c-social' !global;
 
 .#{$this} {
   margin: 30px auto 0 auto;
-    max-width: 250px;
+  max-width: 250px;
 
-    @include breakpoint('>=', 'ml') {
-      max-width: 500px;
-    }
+  @include breakpoint('>=', 'ml') {
+    max-width: 500px;
+  }
 
   &__list {
     padding: 0;
     margin: 0;
     display: grid;
     row-gap: 15px;
-   
-
+  
     @include breakpoint('>=', 'ml') {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-auto-flow: row;
     }
-
   }
 
   &__list-item {

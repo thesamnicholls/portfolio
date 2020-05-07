@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import App from "./pages/App";
-import NotFound from "./pages/NotFound";
 
 const Router = () => (
   <BrowserRouter>
@@ -11,7 +10,6 @@ const Router = () => (
         path="/"
         component={App}
       />
-      <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
 );

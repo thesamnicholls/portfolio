@@ -19,11 +19,9 @@ $this: 'o-navigation' !global;
     top: 50%;
     transform: translate(-50%,-50%);
     color: $white;
-    font: {
-      family: $font-regular;
-      size: 13px;
-      weight: bold;
-    }
+    font-family: $font-regular;
+    font-size: 13px;
+    font-weight: bold;
   }
 }
 
