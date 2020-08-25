@@ -61,7 +61,7 @@ const Navigation = ({ darkMode, setDarkMode }: NavigationProps) => {
               Blog
             </a>
           </li>
-          <li className='o-navigation__list-item'>
+          <li className='o-navigation__list-item--margin'>
             <a
               className='o-navigation__link'
               href='/'
@@ -70,9 +70,9 @@ const Navigation = ({ darkMode, setDarkMode }: NavigationProps) => {
               Contact
             </a>
           </li>
-          {/* <li className='o-navigation__list-item'>
+          <li className='o-navigation__list-item'>
             <button onClick={toggleDarkMode}>Toggle</button>
-          </li> */}
+          </li>
         </ul>
       </div>
     </nav>
