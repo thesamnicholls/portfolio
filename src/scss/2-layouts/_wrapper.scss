@@ -1,0 +1,9 @@
+$this: 'l-wrapper' !global;
+
+.#{$this} {
+  flex: 1;
+
+  @include themed() {
+    background-color: t($background-color);
+  }
+}

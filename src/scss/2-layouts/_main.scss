@@ -1,8 +1,7 @@
-$this: 'l-main' !global;
+$this: "l-main" !global;
 
 .#{$this} {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: $black;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }

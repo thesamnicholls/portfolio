@@ -1,27 +1,206 @@
 $this: 'o-navigation' !global;
 
+$red: #f37272;
+$brown: #584e4a;
+$whitey: #f0f0f0;
+
+$duration: 0.2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 .#{$this} {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
+  position: relative;
 
   &__logo {
     position: relative;
-    width: 50px;
-    height: 50px;
-    border: 5px solid $white;
+    width: 60px;
+    height: 60px;
     text-align: center;
+
+    @include themed() {
+      border: 5px solid t($border);
+    }
   }
 
   &__name {
     position: absolute;
     top: 50%;
-    transform: translate(-50%,-50%);
-    color: $white;
+    transform: translate(-50%, -50%);
     font-family: $font-regular;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
+
+    @include themed() {
+      color: t($color);
+    }
+  }
+
+  &__burger {
+    display: flex;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: 25px;
+    align-items: center;
+    padding: 0;
+
+    @include breakpoint('>=', 'ts') {
+      display: none;
+    }
+
+    &--active {
+      @extend .#{$this}__burger;
+    }
+  }
+
+  &__icon {
+    background-color: $WHITE;
+    display: block;
+    height: 4px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 25px;
+
+    .#{$this}__burger--active & {
+      background-color: transparent;
+    }
+
+    &::before,
+    &::after {
+      background: $WHITE;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all 0.2s ease-out;
+      width: 100%;
+    }
+
+    &::before {
+      top: -9px;
+
+      .#{$this}__burger--active & {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &::after {
+      bottom: -9px;
+
+      .#{$this}__burger--active & {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 80px;
+    min-height: 90vh;
+    width: 100%;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    @include themed() {
+      background-color: t($background-color);
+    }
+
+    @include breakpoint('>=', 'ts') {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      min-height: 1px;
+      top: 0;
+    }
+
+    &--active {
+      @extend .#{$this}__wrapper;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.5s ease-in;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+
+    @include breakpoint('>=', 'ts') {
+      flex-direction: row;
+      justify-content: flex-end;
+      padding: 0 30px;
+    }
+  }
+
+  &__list-item {
+    margin: 0;
+
+    &--margin {
+      @extend .#{$this}__list-item;
+      margin-bottom: 40px;
+
+      @include breakpoint('>=', 'ts') {
+        margin: 0 40px 0 0;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 32px;
+    color: $WHITE;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 8px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $WHITE;
+    }
+    &:before {
+      opacity: 0;
+      transform: translateY(-$distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+
+    &:hover,
+    &:focus {
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      }
+    }
   }
 }
-

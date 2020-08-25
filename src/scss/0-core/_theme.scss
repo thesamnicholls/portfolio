@@ -1,0 +1,47 @@
+// Colour Variables
+$BLACK: #000000;
+$WHITE: #ffffff;
+$WHITE_2: #c9d6ff;
+$WHITE_3: #e2e2e2;
+$GREY: #434343;
+
+// Base Variables
+$background-color: 'background-color';
+$border: 'border';
+$color: 'color';
+
+$themes: (
+  default: (
+    background-color: $BLACK,
+    border: $WHITE,
+    color: $WHITE,
+  ),
+  light: (
+    background-color: $WHITE,
+    border: $BLACK,
+    color: $BLACK,
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .l-main--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
