@@ -1,7 +1,7 @@
-$this: "l-main" !global;
+$this: 'l-main' !global;
 
 .#{$this} {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

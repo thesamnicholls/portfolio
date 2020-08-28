@@ -9,17 +9,20 @@ $GREY: #434343;
 $background-color: 'background-color';
 $border: 'border';
 $color: 'color';
+$icon: 'icon';
 
 $themes: (
   default: (
     background-color: $BLACK,
     border: $WHITE,
     color: $WHITE,
+    icon: $WHITE,
   ),
   light: (
     background-color: $WHITE,
     border: $BLACK,
     color: $BLACK,
+    icon: $BLACK,
   ),
 );
 

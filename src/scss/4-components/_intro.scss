@@ -1,23 +1,30 @@
 $this: 'c-intro' !global;
 
 .#{$this} {
-  margin: 0 auto;
-  max-width: 250px;
+  max-width: 950px;
+  margin: 60px auto;
+
+  @include breakpoint('>=', 'ts') {
+    margin: 150px auto;
+  }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
   }
 
-  &__name {
-    color: $white;
-    font-size: 60px;
-    font-family: $font-regular;
-  }
-
   &__title {
-    color: $white;
-    font-size: 25px;
-    font-family: $font-regular;
+    margin: 0;
+    font-family: $FONT_REGULAR;
+    font-size: 30px;
+    line-height: 1.2;
+
+    @include themed() {
+      color: t($color);
+    }
+
+    @include breakpoint('>=', 'ts') {
+      font-size: 60px;
+    }
   }
 }

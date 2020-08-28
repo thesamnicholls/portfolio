@@ -71,7 +71,13 @@ const Navigation = ({ darkMode, setDarkMode }: NavigationProps) => {
             </a>
           </li>
           <li className='o-navigation__list-item'>
-            <button onClick={toggleDarkMode}>Toggle</button>
+            <button
+              onClick={toggleDarkMode}
+              className={darkMode ? 'c-switch--active' : 'c-switch'}
+              title='Click here to toggle dark mode'
+            >
+              <span className='c-switch__circle'></span>
+            </button>
           </li>
         </ul>
       </div>

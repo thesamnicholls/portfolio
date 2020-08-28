@@ -1,21 +1,39 @@
+// 0 - Core
 @import 'scss/0-core/breakpoints';
 @import 'scss/0-core/normalisation';
 @import 'scss/0-core/theme';
 @import 'scss/0-core/vendor';
 
+// 1 - Base
 @import 'scss/1-base/typopgraphy';
 
+// 2 - Layouts
 @import 'scss/2-layouts/container';
+@import 'scss/2-layouts/grid';
 @import 'scss/2-layouts/main';
 @import 'scss/2-layouts/wrapper';
 
-// @import 'scss/3-objects/footer';
+// 3 - Objects
 @import 'scss/3-objects/navigation';
 
-// @import 'scss/4-components/intro';
-// @import 'scss/4-components/social';
+// 4 - Components
+@import 'scss/4-components/intro';
+@import 'scss/4-components/switch';
 
-h1 {
-  color: white;
-  font-family: $font_regular;
+h2 {
+  font-size: 30px;
+
+  @include breakpoint('>=', 'ts') {
+    font-size: 40px;
+  }
+
+  @include themed() {
+    color: t($color);
+  }
+}
+
+.c-card {
+  width: 200px;
+  height: 250px;
+  border: 1px solid red;
 }

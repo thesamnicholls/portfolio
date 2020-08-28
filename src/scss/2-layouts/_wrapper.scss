@@ -2,6 +2,7 @@ $this: 'l-wrapper' !global;
 
 .#{$this} {
   flex: 1;
+  transition: background-color 0.5s ease-in-out;
 
   @include themed() {
     background-color: t($background-color);

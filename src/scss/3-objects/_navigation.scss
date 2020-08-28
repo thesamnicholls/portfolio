@@ -1,19 +1,11 @@
 $this: 'o-navigation' !global;
 
-$red: #f37272;
-$brown: #584e4a;
-$whitey: #f0f0f0;
-
-$duration: 0.2s;
-$distance: 8px;
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
 .#{$this} {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  justify-content: space-between;
   position: relative;
+  padding-top: 20px;
 
   &__logo {
     position: relative;
@@ -29,10 +21,10 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   &__name {
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
-    font-family: $font-regular;
+    font-family: $FONT_REGULAR;
     font-size: 16px;
     font-weight: bold;
+    transform: translate(-50%, -50%);
 
     @include themed() {
       color: t($color);
@@ -41,13 +33,13 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   &__burger {
     display: flex;
-    position: relative;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    height: 25px;
     align-items: center;
+    position: relative;
+    height: 25px;
     padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 
     @include breakpoint('>=', 'ts') {
       display: none;
@@ -59,12 +51,15 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   &__icon {
-    background-color: $WHITE;
     display: block;
-    height: 4px;
     position: relative;
-    transition: background 0.2s ease-out;
     width: 25px;
+    height: 4px;
+    transition: background 0.2s ease-out;
+
+    @include themed() {
+      background-color: t($icon);
+    }
 
     .#{$this}__burger--active & {
       background-color: transparent;
@@ -72,13 +67,16 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     &::before,
     &::after {
-      background: $WHITE;
-      content: '';
       display: block;
-      height: 100%;
       position: absolute;
-      transition: all 0.2s ease-out;
       width: 100%;
+      height: 100%;
+      transition: all 0.2s ease-out;
+      content: '';
+
+      @include themed() {
+        background-color: t($icon);
+      }
     }
 
     &::before {
@@ -103,12 +101,11 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   &__wrapper {
     position: absolute;
     top: 80px;
-    min-height: 90vh;
     width: 100%;
-    color: white;
-    visibility: hidden;
+    min-height: 90vh;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    visibility: hidden;
 
     @include themed() {
       background-color: t($background-color);
@@ -116,29 +113,29 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     @include breakpoint('>=', 'ts') {
       position: relative;
+      top: 0;
+      min-height: 1px;
       opacity: 1;
       visibility: visible;
-      min-height: 1px;
-      top: 0;
     }
 
     &--active {
       @extend .#{$this}__wrapper;
-      visibility: visible;
       opacity: 1;
       transition: opacity 0.5s ease-in;
+      visibility: visible;
     }
   }
 
   &__menu {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
+    width: 100%;
     padding: 30px;
     margin: 0;
     list-style: none;
-    width: 100%;
 
     @include breakpoint('>=', 'ts') {
       flex-direction: row;
@@ -161,45 +158,59 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   &__link {
-    font-size: 32px;
-    color: $WHITE;
     position: relative;
-    text-decoration: none;
     padding-bottom: 8px;
+    font-size: 32px;
+    text-decoration: none;
 
-    &:before,
-    &:after {
-      content: '';
+    @include themed() {
+      color: t($color);
+    }
+
+    &::before,
+    &::after {
       position: absolute;
+      right: 0;
       bottom: 2px;
       left: 0;
-      right: 0;
       height: 2px;
-      background-color: $WHITE;
+      content: '';
+
+      @include themed() {
+        background-color: t($icon);
+      }
     }
-    &:before {
+
+    &::before {
       opacity: 0;
-      transform: translateY(-$distance);
-      transition: transform 0s $easeOutBack, opacity 0s;
+      transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        opacity 0s;
+      transform: translateY(-8px);
     }
-    &:after {
+
+    &::after {
       opacity: 0;
-      transform: translateY($distance/2);
-      transition: transform $duration $easeOutBack, opacity $duration;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        opacity 0.2s;
+      transform: translateY(8px/2);
     }
 
     &:hover,
     &:focus {
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         opacity: 1;
         transform: translateY(0);
       }
-      &:before {
-        transition: transform $duration $easeOutBack, opacity $duration;
+
+      &::before {
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+          opacity 0.2s;
       }
-      &:after {
-        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+
+      &::after {
+        transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+          opacity 0s 0.2s;
       }
     }
   }

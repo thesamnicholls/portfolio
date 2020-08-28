@@ -1,0 +1,30 @@
+$this: 'c-switch' !global;
+
+.#{$this} {
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background-color: $BLACK;
+  border: 1px solid $WHITE;
+  border-radius: 50px;
+
+  &--active {
+    @extend .#{$this};
+    background-color: $BLACK;
+  }
+
+  &__circle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    background: $WHITE;
+    border-radius: 100%;
+    transition: 0.5s all ease;
+
+    .#{$this}--active & {
+      transform: translateX(40px);
+    }
+  }
+}

@@ -1,12 +1,17 @@
 $this: 'l-container' !global;
 
 .#{$this} {
-  padding: 0 1.25rem;
-  max-width: 100rem;
+  max-width: 1600px;
+  padding: 0 20px;
   margin: 0 auto;
 
   &--margin-top {
     @extend .#{$this};
     margin-top: auto;
+  }
+
+  &--small {
+    @extend .#{$this};
+    max-width: 1300px;
   }
 }
