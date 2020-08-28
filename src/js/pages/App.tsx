@@ -13,16 +13,6 @@ const App = () => {
         <div className='l-container'>
           <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
           <Intro />
-          <div className='l-container--small'>
-            <h2>Blog</h2>
-            <div className='l-grid'>
-              <div className='c-card'></div>
-              <div className='c-card'></div>
-              <div className='c-card'></div>
-              <div className='c-card'></div>
-              <div className='c-card'></div>
-            </div>
-          </div>
         </div>
       </div>
     </main>

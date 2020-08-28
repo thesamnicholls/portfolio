@@ -74,7 +74,7 @@ const Navigation = ({ darkMode, setDarkMode }: NavigationProps) => {
             <button
               onClick={toggleDarkMode}
               className={darkMode ? 'c-switch--active' : 'c-switch'}
-              title='Click here to toggle dark mode'
+              aria-label='Click here to toggle dark mode'
             >
               <span className='c-switch__circle'></span>
             </button>
