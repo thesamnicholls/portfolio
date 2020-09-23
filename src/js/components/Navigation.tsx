@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 type NavigationProps = {
   darkMode: boolean
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>
+  openMenu: boolean
+  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Navigation = ({ darkMode, setDarkMode }: NavigationProps) => {
-  const [openMenu, setOpenMenu] = useState(false)
-
+const Navigation = ({
+  darkMode,
+  setDarkMode,
+  openMenu,
+  setOpenMenu,
+}: NavigationProps) => {
   const toggleOpenMenu = (event: any) => {
     event.preventDefault()
     setOpenMenu(!openMenu)
@@ -47,7 +52,7 @@ const Navigation = ({ darkMode, setDarkMode }: NavigationProps) => {
             <a
               className='o-navigation__link'
               href='/'
-              title='Click here to go to the about page'
+              title='Click here to go to the about section'
             >
               About
             </a>
@@ -56,16 +61,16 @@ const Navigation = ({ darkMode, setDarkMode }: NavigationProps) => {
             <a
               className='o-navigation__link'
               href='/'
-              title='Click here to go to the about page'
+              title='Click here to go to the projects section'
             >
-              Blog
+              Projects
             </a>
           </li>
           <li className='o-navigation__list-item--margin'>
             <a
               className='o-navigation__link'
               href='/'
-              title='Click here to go to the about page'
+              title='Click here to go to the contact section'
             >
               Contact
             </a>

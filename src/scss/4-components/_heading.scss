@@ -1,0 +1,17 @@
+$this: 'c-heading' !global;
+
+.#{$this} {
+  text-align: center;
+
+  &__text {
+    font-size: 30px;
+
+    @include breakpoint('>=', 'ts') {
+      font-size: 40px;
+    }
+
+    @include themed() {
+      color: t($color);
+    }
+  }
+}
